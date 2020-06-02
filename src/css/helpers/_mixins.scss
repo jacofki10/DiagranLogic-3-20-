@@ -1,0 +1,6 @@
+@mixin backgroundImage($url, $bgPosition){
+	background-image: url($url);
+	height: 100%;
+	background-position: $bgPosition;
+	background-size: cover;
+}

@@ -1,0 +1,27 @@
+/*
+ Theme Name: Dj Adrian Alegria
+ Author: Diego Arnes
+ Version: 1.0
+ */
+
+/* ******  Custom Properties (variables) ********** */
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
+/* ****** Reset Styles ********** */
+@import 'base/reset';
+
+
+/* ****** My Styles ********** */
+@import 'layout/grid';
+@import 'layout/header';
+@import 'pages/home';
+@import 'pages/result';
+@import 'layout/footer';
+@import 'pages/sp';
+
+/* ****** Media Queries ********** */
+@import 'layout/mediaQuery';
+
+/* ****** Components ********** */
+@import 'components/printButton';

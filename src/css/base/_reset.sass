@@ -1,0 +1,27 @@
+html
+    font-family: $main-font, $alternate-font
+    font-size: $font-size
+    line-height: $line-height
+    color: $text-color
+    background-color: $bg-color
+
+body
+    font-family: inherit
+    font-size: inherit
+    color: inherit
+    background-color: inherit
+    overflow-x: hidden
+    overflow-y: scroll
+
+a
+    text-decoration: none
+    color: $link-color
+    transition: all .3s ease-out
+    &:hover
+         color: $link-hover-color
+         text-decoration: none !important
+         opacity: 0.3
+
+::selection
+    background-color: $main-color
+    color: $second-color !important

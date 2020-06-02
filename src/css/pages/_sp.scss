@@ -1,0 +1,36 @@
+@media screen and (max-width:623px) {
+  p{
+   line-height: 1.8;
+   font-size: 18px;
+  }
+   /* question
+ ------------------------------------------------ */
+   .container{
+    #question {
+     font-size: 20px;
+    }
+      #meter_area {
+     width: 98%;
+     margin: 30px auto;
+   }
+  }
+   /* result
+   ------------------------------------------------ */
+   #you_diagnosis {
+ #typeName {
+     height: 160px;
+     width: 100%;
+     padding-top: 60px;
+     margin: 20px auto 10px auto;
+    }
+   }
+}
+@media screen and (max-width:1300px) {
+     /* question
+ ------------------------------------------------ */
+     .container{
+  	.btn{
+		width: 90%;
+  }
+}
+}
