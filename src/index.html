@@ -8,28 +8,24 @@
 </head>
 
 <body>
-  <header class="topBar container-fluid bg-light">
-    <div class="container">
-      <div class="logo">
-        <h1>診断</h1>
-      </div>
-      <div id="meter_area"><span id="q_progress_rest"></span>/20</div>
-      <div class="progress">
-        <div class="progress-bar bg-danger" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
+  <header>
+    <h2 class="logo">診断</h2>
+    <div id="meter_area"><span id="q_progress_rest"></span>/20</div>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
+        aria-valuemax="100"></div>
     </div>
   </header>
-  <form id="question_area" name="ResultForm" class="container mt-5">
-    <div id="question" class="m-4 mt-lg-5"></div>
-    <div id="q_btn" class="mt-lg-5 mb-3 mb-lg-5">
-      <button type="button" id="q_answer1" class="btn btn-outline-dark btn-lg m-2">
+  <form id="question_area">
+    <div id="question"></div>
+    <div id="q_btn">
+      <button type="button" id="q_answer1">
         はい
       </button>
-      <button type="button" id="q_answer2" class="btn btn-outline-dark btn-lg m-2">
+      <button type="button" id="q_answer2">
         どちらともいえない
       </button>
-      <button type="button" id="q_answer3" class="btn btn-outline-dark btn-lg m-2">
+      <button type="button" id="q_answer3">
         いいえ
       </button>
     </div>

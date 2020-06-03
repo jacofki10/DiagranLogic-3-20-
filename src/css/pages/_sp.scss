@@ -5,7 +5,6 @@
   }
    /* question
  ------------------------------------------------ */
-   .container{
     #question {
      font-size: 20px;
     }
@@ -13,7 +12,6 @@
      width: 98%;
      margin: 30px auto;
    }
-  }
    /* result
    ------------------------------------------------ */
    #you_diagnosis {
@@ -28,9 +26,7 @@
 @media screen and (max-width:1300px) {
      /* question
  ------------------------------------------------ */
-     .container{
   	.btn{
 		width: 90%;
-  }
 }
 }

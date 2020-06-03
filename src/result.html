@@ -9,48 +9,45 @@
 </head>
 
 <body>
-  <header class="container-fluid bg-light">
-    <div class="container">
-      <div class="logo">
-        <h1>診断</h1>
-      </div>
-    </div>
+  <header>
+    <h2 class="logo">診断</h2>
+    <button type="button" onclick="window.location.href = 'index.html';">もう一度診断する</button>
   </header>
-  <div class="container " id="printableArea">
-    <section class="row py-5">
-      <div class="col-6">
+  <main>
+    <section>
+      <div>
         <h1 id="group9"></h1>
-        <h4 id="catchCopy" class="mb-5"></h4>
-        <h4 class="ttl"><strong>基本性格</strong></h4>
+        <h4 id="catchCopy"></h4>
+        <h4><strong>基本性格</strong></h4>
         <p id="kihonseikakusumari"></p>
       </div>
-      <div id="you_diagnosis" class="col-6">
-        <div id="graph" class="">
+      <div id="you_diagnosis">
+        <div id="graph">
         </div>
-        <p id="hakeikaisetsu" class="text-center"></p>
+        <p id="hakeikaisetsu"></p>
       </div>
     </section>
-    <section class="row border-top py-5">
-      <div class="col-6">
-        <h4 class=" ttl"><strong>コニュニケーションのスタイル</strong></h4>
+    <section>
+      <div>
+        <h4><strong>コニュニケーションのスタイル</strong></h4>
         <p id="kunyunikeishon"></p>
       </div>
-      <div class="col-6">
-        <h4 class=" ttl"><strong>恋愛傾向</strong></h4>
+      <div>
+        <h4><strong>恋愛傾向</strong></h4>
         <p id="renaikeiko"></p>
       </div>
     </section>
-    <section class="row border-top py-5">
-      <div class="col-6">
-        <h4 class="ttl"><strong>相性のいい波形ベスト3</strong></h4>
+    <section>
+      <div>
+        <h4><strong>相性のいい波形ベスト3</strong></h4>
         <lu>
           <li id="aishoii1"></li>
           <li id="aishoii2"></li>
           <li id="aishoii3"></li>
         </lu>
       </div>
-      <div class="col-6">
-        <h4 class="ttl"><strong>相性の悪い波形ワースト3</strong></h4>
+      <div>
+        <h4><strong>相性の悪い波形ワースト3</strong></h4>
         <lu>
           <li id="aishowarui1"></li>
           <li id="aishowarui2"></li>
@@ -58,11 +55,7 @@
         </lu>
       </div>
     </section>
-  </div>
-  </div>
-  <footer>
-    <p>Copyright (C) Diagram Lab all rights reserved.</p>
-  </footer>
+  </main>
 </body>
 
 </html>

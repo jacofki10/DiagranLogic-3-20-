@@ -1,71 +1,19 @@
-body {
-  font-family: Open Sans, Helvetica Neue, Arial;
-  color: #576071;
-  font-size: 16px;
-}
-.topBar{
-  height: 100px;
-  padding: 15px;
-  text-align: center;
-  .logo{
-    float: left;
-    width: 20%;
-    h1{font-size: 2em;
-    margin: 0;}
-    h2{font-size: 1.7em;}
-  }
-  /* meter Area */
-  #meter_area {
-  margin-left: 22%;
-  position: relative;
-  width: 50px;
-  height: 24px;
-  color: black;
-  padding-top: 3px;
-  background: #ffffff;
-  border-radius: 10px;
-  font-size: 15px;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border: 8px solid transparent;
-    border-top-color: #ffffff;
-    border-bottom: 0;
-    margin-left: -8px;
-    margin-bottom: -8px;
-  }
-}
-  .progress{
-    width: 70%;
-    margin: 10px auto;
-    height: 5px;
-        background-color: #838383;
-  }
-}
-  #question_area {
-    text-align: center;
+#question_area {
     transition: 1s;
     height: 70%;
-  }
-#question {
+    #question {
     padding: 10% 0;
-    font-size: 26px;
   }
   /* button */
   #q_btn {
     overflow: hidden;
+    button{
+       width: 28%;
+       height: 120px;
+       font-size: 28px;
+    }
   }
-  #q_answer1, #q_answer2, #q_answer3 {
-    width: 28%;
-    height: 120px;
-    font-size: 28px;
   }
-
 
 #data_area {
   display: none;
