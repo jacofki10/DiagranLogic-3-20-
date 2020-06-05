@@ -1,17 +1,34 @@
 // GET THE RESULT AND LINK TO HIS PATERN//
 
-import { scoreData, MAX_QUESTION_NO, setupQuestion, setResult } from './app';
-export function nextQuestion(currentNo) {
-        if (MAX_QUESTION_NO === currentNo) {
+import { scoreData, setupQuestion, setResult } from './app';
+export const nextQuestion = currentNo => {
+        if (currentNo === 20) {
                 let scoreLevel = '';
                 for (const type in scoreData) {
-                        scoreLevel += scoreData[type] + 0;
+                        if (type === "CP") {
+                                scoreLevel += scoreData[type];
+                                console.log(scoreLevel, type);
+                        } else if (type === "NP") {
+                                scoreLevel += scoreData[type];
+                                console.log(scoreLevel, type);
+                        } else if (type === "A") {
+                                scoreLevel += scoreData[type];
+                                console.log(scoreLevel, type);
+                        } else if (type === "FC") {
+                                scoreLevel += scoreData[type];
+                                console.log(scoreLevel, type);
+                        } else if (type === "AC") {
+                                scoreLevel += scoreData[type];
+                                console.log(scoreLevel, type);
+                        }
                 }
                 scoreLevel = scoreLevel.replace(/0/g, '1');
                 scoreLevel = scoreLevel.replace(/3|4/g, '2');
                 scoreLevel = scoreLevel.replace(/5|6|7/g, '3');
                 scoreLevel = scoreLevel.replace(/8/g, '4');
                 localStorage.setItem('digDetail', scoreLevel);
+                console.log(scoreLevel);
+                debugger;
                 switch (scoreLevel) {
                         // パターン1
                         case '33444':

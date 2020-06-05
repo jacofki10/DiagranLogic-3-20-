@@ -1,5 +1,5 @@
 // QUESTIONS ARRAY//
-export const CP = [
+export const questions = [
   {
     questionNumber: '1',
     type: 'CP',
@@ -20,8 +20,6 @@ export const CP = [
     type: 'CP',
     question: '目標は達成しなければ意味はないと思う',
   },
-];
-export const NP = [
   {
     questionNumber: '5',
     type: 'NP',
@@ -42,8 +40,6 @@ export const NP = [
     type: 'NP',
     question: '自分が感動した番組や映画の話をよくする',
   },
-];
-export const A = [
   {
     questionNumber: '9',
     type: 'A',
@@ -64,8 +60,6 @@ export const A = [
     type: 'A',
     question: '出先で体調が悪いときは、無理せず早く帰る ',
   },
-];
-export const FC = [
   {
     questionNumber: '13',
     type: 'FC',
@@ -86,8 +80,6 @@ export const FC = [
     type: 'FC',
     question: '「言い過ぎたかな」と後悔することがよくある',
   },
-];
-export const AC = [
   {
     questionNumber: '17',
     type: 'AC',
