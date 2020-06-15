@@ -1,7 +1,7 @@
 import { result } from './answers';
 import '../css/style.scss';
 
-console.log(localStorage.getItem('dig'), localStorage.getItem('digDetail') );
+console.log(localStorage.getItem('dig'), localStorage.getItem('digDetail'));
 const dig = Number(localStorage.getItem('dig') - 1);
 
 document.getElementById('graph').classList.add(result[dig].ilustration);
@@ -17,4 +17,3 @@ document.getElementById('aishoii3').innerHTML = result[dig].aishoii3;
 document.getElementById('aishowarui1').innerHTML = result[dig].aishowarui1;
 document.getElementById('aishowarui2').innerHTML = result[dig].aishowarui2;
 document.getElementById('aishowarui3').innerHTML = result[dig].aishowarui3;
-

@@ -2,7 +2,7 @@
     "name": "seminar",
     "version": "1.0.0",
     "private": true,
-    "description": "セサミンディグラム",
+    "description": "ディグラムロジック",
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server --open  --config webpack.dev.js",

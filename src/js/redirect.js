@@ -1,23 +1,24 @@
 // GET THE RESULT AND LINK TO HIS PATERN//
 
 import { scoreData, setupQuestion, setResult } from './app';
+
 export const nextQuestion = currentNo => {
         if (currentNo === 20) {
                 let scoreLevel = '';
                 for (const type in scoreData) {
-                        if (type === "CP") {
+                        if (type === 'CP') {
                                 scoreLevel += scoreData[type];
                                 console.log(scoreLevel, type);
-                        } else if (type === "NP") {
+                        } else if (type === 'NP') {
                                 scoreLevel += scoreData[type];
                                 console.log(scoreLevel, type);
-                        } else if (type === "A") {
+                        } else if (type === 'A') {
                                 scoreLevel += scoreData[type];
                                 console.log(scoreLevel, type);
-                        } else if (type === "FC") {
+                        } else if (type === 'FC') {
                                 scoreLevel += scoreData[type];
                                 console.log(scoreLevel, type);
-                        } else if (type === "AC") {
+                        } else if (type === 'AC') {
                                 scoreLevel += scoreData[type];
                                 console.log(scoreLevel, type);
                         }
@@ -1153,4 +1154,4 @@ export const nextQuestion = currentNo => {
                 return false;
         }
         setupQuestion(currentNo + 1);
-}
+};

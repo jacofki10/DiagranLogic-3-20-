@@ -1,4 +1,3 @@
-'use strict';
 import { questions } from './questions';
 import { nextQuestion } from './redirect';
 import '../css/style.scss';
@@ -17,7 +16,7 @@ function shuffle(a) {
 const finalQuestions = shuffle(questions);
 console.log(finalQuestions);
 
-//INPUT IT IN data_area //
+// INPUT IT IN data_area //
 let html = '';
 for (let i = 0; i < finalQuestions.length; i += 1) {
         html += `<div id='question_${i + 1}' class='diagramData'>`;
@@ -29,19 +28,6 @@ for (let i = 0; i < finalQuestions.length; i += 1) {
 }
 document.getElementById('data_area').innerHTML = html;
 
-// INIT QUIZ //
-const init = _ => {
-        document.querySelectorAll('.diagramData').forEach((element, index) => {
-                const Type = element.querySelector(".type").innerHTML;
-                const Question = element.querySelector(".question").innerHTML;
-                List[index + 1] = {
-                        Type,
-                        Question
-                };
-                scoreData[Type] = 0;
-        });
-        setupQuestion(1);
-}
 // SET THE NEXT  QUESTIONS IN THE QUIZ //
 export const setupQuestion = no => {
         document.getElementById('question').innerHTML = List[no].Question;
@@ -55,20 +41,34 @@ export const setupQuestion = no => {
         document.getElementById('q_answer3').setAttribute('data-type', List[no].Type);
         document.getElementById('q_answer3').setAttribute('data-no', no);
         document.querySelector('#q_progress_rest').textContent = no;
-}
+};
+
+// INIT QUIZ //
+const init = _ => {
+        document.querySelectorAll('.diagramData').forEach((element, index) => {
+                const Type = element.querySelector('.type').innerHTML;
+                const Question = element.querySelector('.question').innerHTML;
+                List[index + 1] = {
+                        Type,
+                        Question,
+                };
+                scoreData[Type] = 0;
+        });
+        setupQuestion(1);
+};
 
 // ON CLICK ACTION / /
 const clickAnswer = (numbers, type, currentNo) => {
-        if (8 <= scoreData[type]) return;
+        if (scoreData[type] >= 8) return;
         scoreData[type] += numbers;
-        console.log(`Question  ${currentNo} Answered  ${numbers}`,  scoreData);
+        console.log(`Question  ${currentNo} Answered  ${numbers}`, scoreData);
         nextQuestion(currentNo);
-}
+};
 const buttons = document.querySelectorAll('#q_answer1, #q_answer2, #q_answer3');
 for (const button of buttons) {
-        button.addEventListener('click', function () {
-                const currentNo =  Number(this.dataset.no);
-                const type = this.dataset.type;
+        button.addEventListener('click', function() {
+                const currentNo = Number(this.dataset.no);
+                const { type } = this.dataset;
                 if (this.id === 'q_answer1') {
                         clickAnswer(2, type, currentNo);
                 } else if (this.id === 'q_answer2') {
@@ -76,25 +76,25 @@ for (const button of buttons) {
                 } else {
                         clickAnswer(0, type, currentNo);
                 }
-        })
+        });
 }
 
 // PROGUESS BAR INCREASE
 let meterMargin = 22;
 let progress = 0;
 for (const button of buttons) {
-        button.addEventListener('click', function () {
-                progress = progress + 5;
-                meterMargin = meterMargin + 3.45;
+        button.addEventListener('click', function() {
+                progress += 5;
+                meterMargin += 3.45;
                 document.querySelector('#meter_area').style.marginLeft = `${meterMargin}%`;
                 document.querySelector('.progress-bar').style.width = `${progress}%`;
-        })
+        });
 }
 
 // IINSERT DATA IN RESULT.HTML
 export const setResult = type => {
         localStorage.setItem('dig', type + 1);
         window.location.href = 'result.html';
-}
+};
 
 init();
