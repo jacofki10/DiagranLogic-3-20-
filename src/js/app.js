@@ -2,7 +2,7 @@ import { questions } from './questions';
 import { nextQuestion } from './redirect';
 import '../css/style.scss';
 
-export const scoreData = [];
+export const scoreData = { CP: 0, NP: 0, A: 0, FC: 0, AC: 0 };
 const List = [];
 
 // SHUFFLE QUESTIONS.JS //
@@ -52,7 +52,7 @@ const init = _ => {
                         Type,
                         Question,
                 };
-                scoreData[Type] = 0;
+                console.log(scoreData);
         });
         setupQuestion(1);
 };
