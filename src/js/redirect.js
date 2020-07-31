@@ -6,22 +6,8 @@ export const nextQuestion = currentNo => {
         if (currentNo === 20) {
                 let scoreLevel = '';
                 for (const type in scoreData) {
-                        if (type === 'CP') {
-                                scoreLevel += scoreData[type];
-                                console.log(scoreLevel, type);
-                        } else if (type === 'NP') {
-                                scoreLevel += scoreData[type];
-                                console.log(scoreLevel, type);
-                        } else if (type === 'A') {
-                                scoreLevel += scoreData[type];
-                                console.log(scoreLevel, type);
-                        } else if (type === 'FC') {
-                                scoreLevel += scoreData[type];
-                                console.log(scoreLevel, type);
-                        } else if (type === 'AC') {
-                                scoreLevel += scoreData[type];
-                                console.log(scoreLevel, type);
-                        }
+                        scoreLevel += scoreData[type];
+                        console.log(scoreLevel, type);
                 }
                 scoreLevel = scoreLevel.replace(/0/g, '1');
                 scoreLevel = scoreLevel.replace(/3|4/g, '2');
