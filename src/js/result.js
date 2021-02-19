@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import { result } from './answers';
 import '../css/style.scss';
 

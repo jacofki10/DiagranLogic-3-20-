@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import { questions } from './questions';
 import { nextQuestion } from './redirect';
 import '../css/style.scss';
@@ -44,16 +45,17 @@ export const setupQuestion = no => {
 };
 
 // INIT QUIZ //
-const init = _ => {
-        document.querySelectorAll('.diagramData').forEach((element, index) => {
+const init = () => {
+        const myNodeList = document.querySelectorAll('.diagramData');
+        [].forEach.call(myNodeList, function (element, index) {
                 const Type = element.querySelector('.type').innerHTML;
                 const Question = element.querySelector('.question').innerHTML;
                 List[index + 1] = {
                         Type,
                         Question,
                 };
-                console.log(scoreData);
         });
+
         setupQuestion(1);
 };
 
@@ -82,14 +84,12 @@ for (const button of buttons) {
 // PROGUESS BAR INCREASE
 let meterMargin = 22;
 let progress = 0;
-for (const button of buttons) {
-        button.addEventListener('click', function() {
-                progress += 5;
-                meterMargin += 3.45;
-                document.querySelector('#meter_area').style.marginLeft = `${meterMargin}%`;
-                document.querySelector('.progress-bar').style.width = `${progress}%`;
-        });
-}
+buttons.addEventListener('click', function() {
+        progress += 5;
+        meterMargin += 3.45;
+        document.querySelector('#meter_area').style.marginLeft = `${meterMargin}%`;
+        document.querySelector('.progress-bar').style.width = `${progress}%`;
+});
 
 // IINSERT DATA IN RESULT.HTML
 export const setResult = type => {
